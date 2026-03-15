@@ -15,7 +15,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
 
-@Component
+//@Component
 public class SdkAiInvoke implements CommandLineRunner {
 
     @Value("${dashscope.api-key}")

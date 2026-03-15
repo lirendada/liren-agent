@@ -3,15 +3,17 @@ package com.liren.lirenagent.demo.invoke;
 import cn.hutool.http.HttpRequest;
 import cn.hutool.http.HttpResponse;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
-@Component
-public class HttpAiInvoke {
+//@Component
+public class HttpAiInvoke implements CommandLineRunner {
 
     @Value("${dashscope.api-key}")
     private String apiKey;
 
-    public void run() {
+    @Override
+    public void run(String args[]) {
         String url = "https://dashscope.aliyuncs.com/api/v1/services/aigc/text-generation/generation";
 
         String jsonBody = """
